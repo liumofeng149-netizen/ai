@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f7fb">
+<title>AI 全景学堂｜从零开始理解与使用 AI</title>
+<style>
+:root{--bg:#f4f7fb;--paper:#fff;--ink:#1d2939;--muted:#667085;--line:#e4eaf2;--blue:#245bd6;--soft:#eaf1ff;--green:#087f5b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(130deg,#e8f1ff,#f8fbff 58%,#e9f8f2);padding:38px 20px 32px;border-bottom:1px solid var(--line)}
+.wrap{max-width:1000px;margin:auto}.eyebrow{font-size:13px;letter-spacing:.08em;color:var(--blue);font-weight:800}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.2;margin:10px 0 14px;letter-spacing:-.03em}.hero p{max-width:720px;color:#475467;margin:0 0 20px}.pill{display:inline-block;border:1px solid #d6e3fb;background:#fff;color:#344054;border-radius:99px;padding:4px 10px;font-size:12px;margin:0 6px 6px 0}
+main{padding:22px 18px 60px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px}.toolbar input{flex:1;min-width:200px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:var(--paper)}button{cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:9px 13px;background:var(--paper);color:var(--ink);font:inherit}button:hover{border-color:#a7bfea}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 4px 18px #34405408}.card h2,.card h3{line-height:1.35;margin:5px 0 10px}.card p{color:var(--muted);margin:0 0 10px}.kicker{font-size:12px;color:var(--blue);font-weight:800}.section{margin-top:30px}.section-title{font-size:24px;line-height:1.3;margin:0 0 14px}.lesson{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,4vw,34px);margin-top:14px}.lesson h3{margin-top:28px}.lesson h3:first-child{margin-top:0}.note{background:var(--soft);border-radius:12px;padding:14px 16px}.quiz{border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:12px}.quiz label{display:block;margin:10px 0}.feedback{font-weight:700;color:var(--green);min-height:1.5em}footer{border-top:1px solid var(--line);padding:22px 18px;color:var(--muted);font-size:13px}.status{color:#8a4b0f;background:#fff4db;border:1px solid #f3d9a4;padding:10px 12px;border-radius:10px;font-size:13px}
+a{color:var(--blue)}.hidden{display:none!important}
+body.dark{--bg:#101828;--paper:#182230;--ink:#f2f4f7;--muted:#b2bdcc;--line:#344054;--soft:#20304d}body.dark header{background:linear-gradient(130deg,#192a45,#182230 65%,#16372e)}body.dark .hero p{color:#d0d5dd}body.dark .pill{background:#182230;color:#e4e7ec;border-color:#344054}
+</style>
+</head>
+<body>
+<header><div class="wrap hero">
+<div class="eyebrow">AI PANORAMA ACADEMY · 预览版</div>
+<h1>AI 全景学堂</h1>
+<p>从电脑与互联网基础开始，用生活化解释、可操作练习和清晰的安全边界，逐步学会理解 AI、选择工具、核验答案，并进一步走向 API、知识库、Agent 与自动化。</p>
+<span class="pill">零基础友好</span><span class="pill">先理解，再动手</span><span class="pill">重视事实核验与安全</span>
+<div style="margin-top:16px"><button id="theme">切换明暗主题</button> <a href="https://github.com/liumofeng149-netizen/ai" target="_blank" rel="noopener">查看项目仓库</a></div>
+</div></header>
+<main class="wrap">
+<div class="status">当前是在线轻量预览版。课程持续编写与审查中；它不是最终教材，未完成独立审查的内容不会标记为正式批准。</div>
+<section class="section">
+<h2 class="section-title">先从哪里开始？</h2>
+<div class="toolbar"><input id="search" type="search" placeholder="搜索课程，例如：文件、AI、模型、API"><button id="clear">清除搜索</button></div>
+<div id="courses" class="grid">
+<article class="card course" data-search="M00 电脑 互联网 文件 文件夹 浏览器 网站 上传 下载 安全"><div class="kicker">模块 M00 · 必修基础</div><h3>电脑与互联网基础</h3><p>理解文件、文件夹、浏览器、网站、上传下载、账号权限、服务器、云服务与网络请求。</p><a href="#lesson">从第一课开始 ↓</a></article>
+<article class="card course" data-search="M01 人工智能 AI 机器学习 深度学习 生成式AI 幻觉 核验"><div class="kicker">模块 M01 · AI 入门</div><h3>认识 AI 与它的边界</h3><p>了解 AI、机器学习、生成式 AI 的关系，识别错误回答，并练习验证重要信息。</p><a href="#lesson">学习本页课程 ↓</a></article>
+<article class="card course" data-search="M02 产品 模型 平台 应用 API 工具 聊天产品"><div class="kicker">模块 M02 · 生态与工具</div><h3>模型、产品、平台和应用</h3><p>分清背后的模型、你实际使用的产品，以及程序如何通过 API 调用服务。</p><a href="#lesson">阅读课程 ↓</a></article>
+<article class="card course" data-search="M04 提示词 prompt 背景 约束 输出格式 练习"><div class="kicker">模块 M04 · 实用技能</div><h3>把需求说清楚</h3><p>把模糊请求改写成包含任务、背景、材料、约束和输出格式的清晰说明。</p><a href="#practice">进入练习 ↓</a></article>
+<article class="card course" data-search="M05 Token 上下文 记忆 费用"><div class="kicker">模块 M05 · 工作原理</div><h3>Token、上下文与记忆</h3><p>分清一次请求能用到的内容、产品记忆、外部知识库和模型训练。</p><a href="https://github.com/liumofeng149-netizen/ai" target="_blank" rel="noopener">查看项目资料</a></article>
+<article class="card course" data-search="M07 API SDK JSON HTTP 密钥 费用"><div class="kicker">模块 M07 · 可选进阶</div><h3>读懂 API 请求</h3><p>理解请求、响应、JSON、认证、SDK 和常见错误；先做无费用的纸上模拟。</p><a href="https://github.com/liumofeng149-netizen/ai" target="_blank" rel="noopener">查看项目资料</a></article>
+</div><p id="count" style="color:var(--muted);font-size:13px;margin-top:10px">显示全部课程</p>
+</section>
+<section id="lesson" class="section">
+<h2 class="section-title">入门课：模型、产品、平台和应用有什么区别？</h2>
+<div class="lesson">
+<p class="note"><strong>一句话记忆：</strong>模型是执行计算的组件；产品是你直接使用的服务；平台提供基础能力；应用把模型、数据、工具和流程组合起来完成实际任务。现实中的边界可能重叠，这是一种帮助学习的分类框架，不是对任何公司的内部架构断言。</p>
+<h3>1. 用会议纪要理解四个层次</h3>
+<ul><li><strong>模型：</strong>把录音转成文字，或根据文字提取摘要和待办事项。</li><li><strong>产品：</strong>让你上传录音、查看摘要、修改结果的界面。</li><li><strong>平台：</strong>为开发者提供模型访问、认证、权限、运行环境等基础能力。</li><li><strong>应用：</strong>把上传、转写、总结、负责人确认和写入任务系统串成完整流程。</li></ul>
+<h3>2. API 是什么？</h3>
+<p>API（应用程序编程接口）让一个软件按约定向另一个软件或服务发送请求，并处理返回结果。它不是模型本身，也不等于聊天产品。程序化调用还需要考虑密钥、费用、错误处理、权限和日志。</p>
+<h3>3. 为什么同一模型的体验可能不同？</h3>
+<p>产品体验还可能受系统指令、上下文、模型版本、工具、文件权限、联网能力、参数、路由和后处理影响。某产品能联网，并不能单独证明底层模型在所有环境中都自带联网能力。</p>
+<h3>4. 什么时候用聊天产品，什么时候考虑 API？</h3>
+<ul><li>个人问答、写作和学习：先考虑现成聊天产品。</li><li>每天按固定规则处理大量报告：可评估 API 或自动化工作流。</li><li>自动发送消息、修改业务数据或删除文件：先做测试，并保留权限限制、日志和人工确认。</li></ul>
+<h3>5. 常见误区</h3>
+<ul><li>产品能做的事，不一定全由模型单独完成。</li><li>API 不会自动让回答更聪明，也不保证更便宜。</li><li>品牌名称不一定能说明具体模型版本和当前功能。</li></ul>
+<div id="practice" class="quiz"><strong>小测：产品提供“联网搜索”功能，能否仅凭这一点断言底层模型本身永远自带联网能力？</strong>
+<label><input type="radio" name="answer" value="a"> A. 能，产品的所有功能都一定是模型自身能力。</label>
+<label><input type="radio" name="answer" value="b"> B. 不能，联网可能由产品或应用额外接入工具实现。</label>
+<button id="check">检查答案</button><p id="feedback" class="feedback" aria-live="polite">请选择一个答案。</p></div>
+<h3>参考答案</h3><p>正确答案是 B。用户看到的功能可能由模型、工具、检索系统和产品流程共同提供。分析具体服务时，应查看官方当前文档，不要仅凭名字或界面猜测内部结构。</p>
+<h3>官方资料入口</h3>
+<ul><li><a href="https://developers.openai.com/api/docs" target="_blank" rel="noopener">OpenAI API 文档</a></li><li><a href="https://platform.claude.com/docs/en/models/overview" target="_blank" rel="noopener">Anthropic 模型概览</a></li><li><a href="https://ai.google.dev/gemini-api/docs" target="_blank" rel="noopener">Gemini API 文档</a></li><li><a href="https://api-docs.deepseek.com/" target="_blank" rel="noopener">DeepSeek API 文档</a></li></ul>
+<p style="color:var(--muted);font-size:13px">产品名称、价格、套餐、模型版本和可用性会变化。以上链接只是官方核验入口，不代表本页所有主张均已完成逐条审查。</p>
+</div>
+</section>
+<section class="section grid">
+<article class="card"><div class="kicker">学习原则</div><h3>先理解，再操作</h3><p>先用纸上模拟和非敏感示例建立心智模型，再考虑真实 API、自动化或有副作用的工具。</p></article>
+<article class="card"><div class="kicker">安全底线</div><h3>不要泄露密钥</h3><p>不要把 API Key、密码、验证码或私人资料发给 AI，也不要将密钥放进公开网页或前端代码。</p></article>
+<article class="card"><div class="kicker">验收原则</div><h3>草稿不等于通过</h3><p>课程需要独立事实核验、练习验收和真实目标读者试读。没有证据就标记待核验，不虚构完成状态。</p></article>
+</section>
+</main>
+<footer><div class="wrap">AI 全景学堂 · 在线轻量预览版 v0.1 · 持续建设中 · <a href="https://github.com/liumofeng149-netizen/ai" target="_blank" rel="noopener">项目仓库</a></div></footer>
+<script>
+(function(){
+var search=document.getElementById("search"), cards=Array.from(document.querySelectorAll(".course")), count=document.getElementById("count");
+function filter(){var q=search.value.trim().toLowerCase(), n=0;cards.forEach(function(c){var ok=!q||c.getAttribute("data-search").toLowerCase().indexOf(q)>=0||c.innerText.toLowerCase().indexOf(q)>=0;c.classList.toggle("hidden",!ok);if(ok)n++});count.textContent=q?"找到 "+n+" 门相关课程":"显示全部课程"}
+search.addEventListener("input",filter);document.getElementById("clear").addEventListener("click",function(){search.value="";filter();search.focus()});
+document.getElementById("theme").addEventListener("click",function(){document.body.classList.toggle("dark")});
+document.getElementById("check").addEventListener("click",function(){var a=document.querySelector('input[name="answer"]:checked'),f=document.getElementById("feedback");if(!a){f.textContent="请先选择一个答案。";return}f.textContent=a.value==="b"?"答对了！联网可能由产品或应用接入工具提供。":"再想一想：用户看到的功能不一定全部来自模型本身。";});
+})();
+</script>
+</body></html>
